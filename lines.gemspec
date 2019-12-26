@@ -1,12 +1,14 @@
 $:.push File.expand_path("../lib", __FILE__)
 
+# Maintain your gem's version:
 require "lines/version"
 require 'date'
 
+# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "lines-engine"
   s.version     = Lines::VERSION
-  s.authors     = ["Jochen Greif"]
+  s.authors     = ["Opoloo GbR"]
   s.email       = ["info@opoloo.de"]
   s.homepage    = "http://lines.opoloo.com"
   s.summary     = "LINES is the open source blog platform you have been waiting for"
@@ -30,16 +32,17 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'jquery-rails', '< 6', '>= 3.1.0'
   s.add_runtime_dependency 'acts-as-taggable-on', '>= 3.5'
   s.add_runtime_dependency 'bcrypt', '~> 3.1.0', '>= 3.1.0'
-  s.add_runtime_dependency 'sitemap_generator', '>= 5.0.5'
+  s.add_runtime_dependency 'sitemap_generator', '~> 5.0.0', '>= 5.0.5'
   s.add_runtime_dependency 'jquery-fileupload-rails', '>= 0.4.1'
   s.add_runtime_dependency 'jquery-ui-rails', '>= 5.0.0'
   s.add_runtime_dependency 'sanitize', '>= 4.4.0'
   s.add_runtime_dependency 'sass-rails', '>= 4.0.0'
   s.add_runtime_dependency 'coffee-rails', '< 6', '>= 4.0.0'
   s.add_runtime_dependency 'uglifier', '>= 2'
-  s.add_runtime_dependency 'friendly_id', '>= 5.2.4'
+  s.add_runtime_dependency 'friendly_id', '>= 5.1.0'
   s.add_runtime_dependency 'rails3-jquery-autocomplete', '>= 1.0.11'
   s.add_runtime_dependency 'meta-tags', '>= 2.0.0'
+  s.add_runtime_dependency 'bcrypt-ruby', '>= 3.0.0'
   s.add_runtime_dependency 'i18n', '>= 0.7.0'
   s.add_runtime_dependency 'sprockets-rails', '< 4'
   s.add_runtime_dependency 'rails', ['>= 3', '< 6']

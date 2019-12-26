@@ -1,4 +1,4 @@
-# Provides CRUD actions for +Author+ model.
+# Provides CRUD actions for +Lines::Author+ model.
 
 require_dependency "lines/admin/application_controller"
 

@@ -7,7 +7,6 @@ unless File.exists?(config_file)
 end
 
 # Load the configuration
-#CONFIG = YAML.load_file(config_file)
-CONFIG = YAML.load(ERB.new(File.read(config_file)).result)
+CONFIG = YAML.load_file(config_file)
 CONFIG.merge! CONFIG.fetch(Rails.env, {})
 CONFIG.symbolize_keys!

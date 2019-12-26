@@ -18,7 +18,7 @@ gemspec
 #gem 'meta-tags', require: 'meta_tags'
 #gem 'rack-ssl-enforcer', require: 'rack/ssl-enforcer'
 #gem 'acts-as-taggable-on', '~> 3.5.0'
-
+gem 'jquery-ui-rails'
 
 group :development do
   gem 'capistrano'
@@ -36,7 +36,6 @@ end
 group :test do
   gem 'faker'
   gem 'capybara'
-  gem 'shoulda-matchers'
   gem 'guard-rspec', '= 4.2.0'
   gem 'rb-inotify', '~> 0.9'
   gem 'launchy'

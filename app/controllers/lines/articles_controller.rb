@@ -18,15 +18,9 @@ module Lines
         format.html {
           @first_page = (params[:page] and params[:page].to_i > 0) ? false : true
           if params[:tag]
-            @articles = Lines::Article.published.tagged_with(params[:tag]).page(params[:page].to_i)
+            @articles = Lines::Article.published.tagged_with(params[:tag]).page([1, params[:page].to_i].max)
           else
-            @articles = Lines::Article.published.page(params[:page].to_i).padding(1)
-          end
-          
-          if @articles.first_page?
-            if @first_article = Article.published.first
-              @first_article.teaser = nil unless @first_article.teaser.present?
-            end
+            @articles = Lines::Article.published.page([1, params[:page].to_i].max)
           end
           
           set_meta_tags title: SITE_TITLE,

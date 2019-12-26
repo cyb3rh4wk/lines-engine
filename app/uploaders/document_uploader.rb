@@ -2,7 +2,7 @@
 # Carrierwave uploader for docuemnts.
 class DocumentUploader < CarrierWave::Uploader::Base
 
-  storage CONFIG[:storage].to_sym
+  storage :file
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
